@@ -1,0 +1,504 @@
+/*-------------------------------
+    Dark Theme  CSS
+-------------------------------*/
+.switch-theme-mode {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  z-index: 99;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px rgba(32, 32, 32, 0.2392156863);
+  background: white url("../img/night.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+  background: white url("../img/sunny.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*---------------------------------
+    Color CSS For Elements 
+-----------------------------------*/
+.theme-light .footer-logo .logo-dark,
+.theme-light .navbar-brand .logo-dark {
+  display: none !important;
+}
+.theme-light .footer-logo .logo-light,
+.theme-light .navbar-brand .logo-light {
+  display: block !important;
+}
+
+.theme-dark .dpt-100 {
+  padding-top: 100px;
+}
+.theme-dark .footer-logo .logo-light,
+.theme-dark .navbar-brand .logo-light {
+  display: none !important;
+}
+.theme-dark .footer-logo .logo-dark,
+.theme-dark .navbar-brand .logo-dark {
+  display: block !important;
+}
+.theme-dark .td-cod,
+.theme-dark .td-cod.bg-seashell,
+.theme-dark .header-wrap.sticky,
+.theme-dark .search-property,
+.theme-dark .testimonial-card.style2,
+.theme-dark .testimonial-card.style3,
+.theme-dark .footer-wrap.style1 .footer-widget .select-lang .navbar-language,
+.theme-dark .ui-slider-horizontal,
+.theme-dark .footer-wrap {
+  background-color: #111 !important;
+}
+.theme-dark body,
+.theme-dark #signIn .modal-body,
+.theme-dark #signUp .modal-body,
+.theme-dark .counter-area::after,
+.theme-dark .bg-white {
+  background-color: #000 !important;
+}
+.theme-dark .td-aztech,
+.theme-dark .bg-vista-white,
+.theme-dark .bg-seashell,
+.theme-dark .counter-card-wrap.style2,
+.theme-dark .property-card,
+.theme-dark .footer-wrap.style2,
+.theme-dark .about-wrap.style2 .about-box,
+.theme-dark .property-card.style5 .property-info,
+.theme-dark .property-card.style6 .property-info,
+.theme-dark .simple-card .simple-card-info,
+.theme-dark .testimonial-card .quote-wrap,
+.theme-dark .testimonial-card .quote-wrap::before,
+.theme-dark .testimonial-card .quote-wrap .client-info-wrap,
+.theme-dark .agent-card,
+.theme-dark .blog-card,
+.theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap,
+.theme-dark .play-now,
+.theme-dark .footer-wrap.style1 .footer-widget .select-lang .navbar-language,
+.theme-dark .select-lang .navbar-language .dropdown-menu,
+.theme-dark .property-card.style4 .property-info {
+  background-color: #111828 !important;
+}
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6,
+.theme-dark h3 a,
+.theme-dark a,
+.theme-dark .post-tag span i,
+.theme-dark .hero-wrap.style1 .hero-content form i,
+.theme-dark #signIn .modal-content .modal-header .btn-close i, .theme-dark #signUp .modal-content .modal-header .btn-close i,
+.theme-dark .agent-details-wrap .agent-info-wrap .agent-info li b,
+.theme-dark .property-details .property-desc .property-features li,
+.theme-dark .counter-card-wrap .counter-card .counter-icon i {
+  color: #fff !important;
+}
+.theme-dark p, .theme-dark span,
+.theme-dark .checkbox label,
+.theme-dark .form_group label,
+.theme-dark .testimonial-card .quote-wrap .client-info-wrap .ratings,
+.theme-dark .about-wrap .about-content .content-feature-list li,
+.theme-dark .property-card.style1 .property-info .ratings,
+.theme-dark .property-card .property-info .property-metainfo li,
+.theme-dark .agent-tablist .nav-item .nav-link, .theme-dark .property-tablist .nav-item .nav-link,
+.theme-dark .property-details .property-title .property-metainfo li,
+.theme-dark .property-details .property-desc .property-annuties li,
+.theme-dark article ol li,
+.theme-dark .terms-wrap ol li,
+.theme-dark .content-feature-list li,
+.theme-dark .blog-card .blog-info .blog-metainfo li,
+.theme-dark .agent-info-box .agent-address li,
+.theme-dark article .post-metainfo li,
+.theme-dark .login-form .login-body .form-group label {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap .form-group select option,
+.theme-dark .hero-wrap.style2 .container-fluid .client-feedback span {
+  color: #000 !important;
+}
+.theme-dark h3:hover a,
+.theme-dark a:hover,
+.theme-dark article p strong, .theme-dark .terms-wrap p strong,
+.theme-dark .counter-card-wrap .counter-card .counter-text h2,
+.theme-dark .counter-card-wrap .counter-card .counter-text h2 span,
+.theme-dark .counter-card-wrap .counter-card .counter-text h2 .target,
+.theme-dark .property-card .property-info .property-metainfo li i,
+.theme-dark .hero-wrap.style2 .hero-slide-item .hero-content h1 span,
+.theme-dark .agent-tablist .nav-item .nav-link.active,
+.theme-dark .property-tablist .nav-item .nav-link.active,
+.theme-dark .property-card.style4 .property-info .property-price {
+  color: #EC3323 !important;
+}
+.theme-dark article,
+.theme-dark .error-wrap,
+.theme-dark .comment-item-wrap .comment-item,
+.theme-dark .footer-wrap.style1 .footer-bottom,
+.theme-dark .footer-wrap.style2 .footer-bottom,
+.theme-dark .post-meta-option,
+.theme-dark .comment-box-wrap,
+.theme-dark .property-card.style1,
+.theme-dark .property-card.style3 .property-info .property-status-wrap,
+.theme-dark .property-card.style6 .property-info .property-status-wrap,
+.theme-dark .property-card .property-info .property-metainfo li {
+  border-color: rgba(255, 255, 255, 0.19);
+}
+.theme-dark .testimonial-card .quote-wrap:before {
+  border-left: 20px solid #000;
+  border-bottom: 25px solid #111828;
+  border-right: 20px solid #000;
+  box-shadow: -11px 14px 46px -2px rgba(0, 0, 0, 0.1);
+}
+.theme-dark .wp-block-quote,
+.theme-dark .contact-item,
+.theme-dark .property-card .property-info .property-metainfo {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.theme-dark .footer-wrap .footer-widget .footer-widget-title::after {
+  background-color: #fff;
+}
+.theme-dark .filter-widget #amount_one {
+  border: none;
+}
+.theme-dark .hero-slider-one.owl-carousel .owl-nav button.owl-prev,
+.theme-dark .hero-slider-one.owl-carousel .owl-nav button.owl-next {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.theme-dark .hero-slider-one.owl-carousel .owl-nav button.owl-prev i,
+.theme-dark .hero-slider-one.owl-carousel .owl-nav button.owl-next i {
+  color: #fff;
+}
+.theme-dark .hero-slider-one.owl-carousel .owl-nav button.owl-prev:hover,
+.theme-dark .hero-slider-one.owl-carousel .owl-nav button.owl-next:hover {
+  background-color: #EC3323;
+  border-color: transparent;
+}
+.theme-dark .tag-list ul li a:hover {
+  background: #EC3323 !important;
+  border-color: transparent;
+  color: #fff;
+}
+.theme-dark .partner-item img {
+  filter: brightness(0) invert(1);
+}
+.theme-dark .video-wrap .video-content::after {
+  background: rgba(0, 0, 0, 0.86);
+}
+.theme-dark .link.style1 {
+  color: #EC3323 !important;
+}
+.theme-dark .btn.style3 {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+.theme-dark .btn.style3:after {
+  background-color: #EC3323;
+}
+.theme-dark .btn.style3:hover {
+  border-color: transparent;
+}
+.theme-dark .btn.style4 {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+.theme-dark .btn.style4:after {
+  background-color: #002172;
+}
+.theme-dark .btn.style4:hover {
+  color: #fff;
+  border-color: transparent;
+}
+.theme-dark .hw-card .hw-img .hw-shape-one {
+  filter: brightness(1) invert(0.8);
+}
+.theme-dark .testimonial-wrap .testimonial-shape-one {
+  opacity: 0.3;
+}
+.theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap .form-group select,
+.theme-dark select {
+  background-image: url(../img/down-arrow-white.png);
+}
+.theme-dark .video-wrap.style2::after {
+  background-color: rgb(0, 0, 0);
+}
+.theme-dark .hero-wrap.style1 .hero-img-wrap .hero-property-slider .owl-nav button.owl-prev:after,
+.theme-dark .hero-wrap.style1 .hero-img-wrap .hero-property-slider .owl-nav button.owl-next:after,
+.theme-dark .owl-carousel .owl-dots button.owl-dot span:after {
+  background: rgba(255, 255, 255, 0.2);
+}
+.theme-dark .city-card.style2 h3 a::after,
+.theme-dark .owl-carousel .owl-dots button.owl-dot.active span:after {
+  background: #EC3323;
+}
+.theme-dark .city-slider-two.owl-carousel .owl-dots .owl-dot span,
+.theme-dark .testimonial-slider-three.owl-carousel .owl-dots .owl-dot span,
+.theme-dark .property-slider-two.owl-carousel .owl-dots .owl-dot span,
+.theme-dark .property-slider-three.owl-carousel .owl-dots .owl-dot span {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.theme-dark .city-slider-two.owl-carousel .owl-dots .owl-dot.active span,
+.theme-dark .testimonial-slider-three.owl-carousel .owl-dots .owl-dot.active span,
+.theme-dark .property-slider-two.owl-carousel .owl-dots .owl-dot.active span,
+.theme-dark .property-slider-three.owl-carousel .owl-dots .owl-dot.active span {
+  background-color: #EC3323;
+}
+.theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap .form-group input,
+.theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap .form-group select,
+.theme-dark .hero-wrap.style1 .hero-content form input,
+.theme-dark .filter-widget .form-group input,
+.theme-dark .filter-widget .form-group textarea,
+.theme-dark .agent-desc .review-form .form-group input,
+.theme-dark .property-desc .review-form .form-group input,
+.theme-dark .agent-info-box .agent-contact .form-group input,
+.theme-dark .agent-info-box .agent-contact .form-group textarea,
+.theme-dark .agent-desc .review-form .form-group textarea,
+.theme-dark .property-desc .review-form .form-group textarea,
+.theme-dark .newsletter-form .form-group input,
+.theme-dark .search-box .form-group input,
+.theme-dark #contactForm .form-group input,
+.theme-dark #contactForm .form-group textarea,
+.theme-dark #cmt-form .comment-form .form-group input,
+.theme-dark #cmt-form .comment-form .form-group textarea,
+.theme-dark .search-property .property-search-form .form-group input,
+.theme-dark .login-content .user-form input {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap .form-group input::-moz-placeholder, .theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap .form-group select::-moz-placeholder, .theme-dark .hero-wrap.style1 .hero-content form input::-moz-placeholder, .theme-dark .filter-widget .form-group input::-moz-placeholder, .theme-dark .filter-widget .form-group textarea::-moz-placeholder, .theme-dark .agent-desc .review-form .form-group input::-moz-placeholder, .theme-dark .property-desc .review-form .form-group input::-moz-placeholder, .theme-dark .agent-info-box .agent-contact .form-group input::-moz-placeholder, .theme-dark .agent-info-box .agent-contact .form-group textarea::-moz-placeholder, .theme-dark .agent-desc .review-form .form-group textarea::-moz-placeholder, .theme-dark .property-desc .review-form .form-group textarea::-moz-placeholder, .theme-dark .newsletter-form .form-group input::-moz-placeholder, .theme-dark .search-box .form-group input::-moz-placeholder, .theme-dark #contactForm .form-group input::-moz-placeholder, .theme-dark #contactForm .form-group textarea::-moz-placeholder, .theme-dark #cmt-form .comment-form .form-group input::-moz-placeholder, .theme-dark #cmt-form .comment-form .form-group textarea::-moz-placeholder, .theme-dark .search-property .property-search-form .form-group input::-moz-placeholder, .theme-dark .login-content .user-form input::-moz-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap .form-group input::placeholder,
+.theme-dark .hero-wrap.style3 .hero-content .property-search-form .form-group-wrap .form-group select::placeholder,
+.theme-dark .hero-wrap.style1 .hero-content form input::placeholder,
+.theme-dark .filter-widget .form-group input::placeholder,
+.theme-dark .filter-widget .form-group textarea::placeholder,
+.theme-dark .agent-desc .review-form .form-group input::placeholder,
+.theme-dark .property-desc .review-form .form-group input::placeholder,
+.theme-dark .agent-info-box .agent-contact .form-group input::placeholder,
+.theme-dark .agent-info-box .agent-contact .form-group textarea::placeholder,
+.theme-dark .agent-desc .review-form .form-group textarea::placeholder,
+.theme-dark .property-desc .review-form .form-group textarea::placeholder,
+.theme-dark .newsletter-form .form-group input::placeholder,
+.theme-dark .search-box .form-group input::placeholder,
+.theme-dark #contactForm .form-group input::placeholder,
+.theme-dark #contactForm .form-group textarea::placeholder,
+.theme-dark #cmt-form .comment-form .form-group input::placeholder,
+.theme-dark #cmt-form .comment-form .form-group textarea::placeholder,
+.theme-dark .search-property .property-search-form .form-group input::placeholder,
+.theme-dark .login-content .user-form input::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.theme-dark .filter-item-num select,
+.theme-dark .filter-item-cat select,
+.theme-dark .search-property .property-search-form .form-group select {
+  background-color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.theme-dark .property-card.style5 .property-info .property-metainfo,
+.theme-dark .testimonial-card.style2,
+.theme-dark .filter-widget .form-group select,
+.theme-dark .faq-wrap.style1 .accordion-item,
+.theme-dark .faq-wrap.style2 .accordion-item,
+.theme-dark .faq-wrap.style3 .accordion-item,
+.theme-dark .faq-wrap.style4 .accordion-item {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.theme-dark .accordion-item .accordion-collapse .accordion-body {
+  border: none;
+  color: #fff;
+  background-color: transparent;
+}
+.theme-dark .filter-widget .form-group select,
+.theme-dark .faq-wrap.style1 .accordion-item .accordion-button,
+.theme-dark .faq-wrap.style2 .accordion-item .accordion-button,
+.theme-dark .faq-wrap.style3 .accordion-item .accordion-button,
+.theme-dark .faq-wrap.style4 .accordion-item .accordion-button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.theme-dark .filter-widget .form-group select {
+  opacity: 1;
+}
+.theme-dark .tag-list li a {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.theme-dark .tag-list li a:hover {
+  color: #fff !important;
+}
+.theme-dark .social-profile.style1 li a,
+.theme-dark .social-profile.style2 li a,
+.theme-dark .footer-wrap .footer-bottom .social-profile li a,
+.theme-dark .agent-details-wrap .agent-info-wrap .agent-social .social-profile li a,
+.theme-dark .agent-card .agent-info .social-profile li a,
+.theme-dark .testimonial-slider-two.owl-carousel .owl-nav button.owl-prev,
+.theme-dark .testimonial-slider-two.owl-carousel .owl-nav button.owl-next,
+.theme-dark .page-nav li a {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.theme-dark .social-profile.style1 li a i,
+.theme-dark .social-profile.style2 li a i,
+.theme-dark .footer-wrap .footer-bottom .social-profile li a i,
+.theme-dark .agent-details-wrap .agent-info-wrap .agent-social .social-profile li a i,
+.theme-dark .agent-card .agent-info .social-profile li a i,
+.theme-dark .testimonial-slider-two.owl-carousel .owl-nav button.owl-prev i,
+.theme-dark .testimonial-slider-two.owl-carousel .owl-nav button.owl-next i,
+.theme-dark .page-nav li a i {
+  color: #fff;
+}
+.theme-dark .social-profile.style1 li a:hover,
+.theme-dark .social-profile.style2 li a:hover,
+.theme-dark .footer-wrap .footer-bottom .social-profile li a:hover,
+.theme-dark .agent-details-wrap .agent-info-wrap .agent-social .social-profile li a:hover,
+.theme-dark .agent-card .agent-info .social-profile li a:hover,
+.theme-dark .testimonial-slider-two.owl-carousel .owl-nav button.owl-prev:hover,
+.theme-dark .testimonial-slider-two.owl-carousel .owl-nav button.owl-next:hover,
+.theme-dark .page-nav li a:hover {
+  background-color: #EC3323;
+  color: #fff !important;
+  border-color: transparent;
+}
+.theme-dark .social-profile.style1 li a:hover i,
+.theme-dark .social-profile.style2 li a:hover i,
+.theme-dark .footer-wrap .footer-bottom .social-profile li a:hover i,
+.theme-dark .agent-details-wrap .agent-info-wrap .agent-social .social-profile li a:hover i,
+.theme-dark .agent-card .agent-info .social-profile li a:hover i,
+.theme-dark .testimonial-slider-two.owl-carousel .owl-nav button.owl-prev:hover i,
+.theme-dark .testimonial-slider-two.owl-carousel .owl-nav button.owl-next:hover i,
+.theme-dark .page-nav li a:hover i {
+  color: #fff;
+}
+.theme-dark .page-nav li a.active {
+  background-color: #EC3323;
+  color: #fff !important;
+  border-color: transparent;
+}
+.theme-dark .page-nav li a.active i {
+  color: #fff;
+}
+.theme-dark .play-now .ripple,
+.theme-dark .play-now .ripple:before,
+.theme-dark .play-now .ripple:after {
+  -ms-box-shadow: 0 0 0 0 #000;
+  -o-box-shadow: 0 0 0 0 #000;
+  box-shadow: 0 0 0 0 #000;
+}
+.theme-dark .accordion-item .accordion-header .accordion-button.collapsed span i {
+  color: #fff;
+}
+.theme-dark .agent-details-wrap,
+.theme-dark .agent-desc .review-form,
+.theme-dark .property-desc .review-form,
+.theme-dark .sidebar .sidebar-widget {
+  box-shadow: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.theme-dark .counter-card-wrap.style2 .counter-card .counter-card-shape {
+  opacity: 0.5;
+}
+.theme-dark .filter-widget .form-group select option {
+  color: #000;
+}
+
+@media only screen and (max-width: 991px) {
+  .theme-dark .mobile-top-bar span,
+  .theme-dark .header-wrap.style2 .mobile-top-bar span,
+  .theme-dark .header-wrap.style3 .mobile-top-bar span {
+    background-color: #fff;
+  }
+  .theme-dark .main-menu li a:hover {
+    color: #002172;
+  }
+  .theme-dark .main-menu-wrap,
+  .theme-dark .header-wrap .navbar .navbar-nav .nav-item .dropdown-menu {
+    background-color: #111;
+  }
+  .theme-dark .header-wrap .navbar .navbar-nav .nav-item a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .theme-dark .menu-close i,
+  .theme-dark .header-wrap .navbar .navbar-nav .nav-item .menu-expand i {
+    color: #fff;
+  }
+  .theme-dark .main-menu li a.active,
+  .theme-dark .main-menu li a {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .theme-dark .main-menu-wrap #menu ul li.has-children .sub-menu {
+    background-color: #111828;
+  }
+  .theme-dark .header-wrap .navbar .navbar-nav .nav-item .dropdown-menu {
+    background-color: #111;
+  }
+  .theme-dark .header-wrap .navbar .navbar-nav .nav-item a:hover,
+  .theme-dark .header-wrap .navbar .navbar-nav .nav-item a.active {
+    color: #EC3323 !important;
+  }
+}/*# sourceMappingURL=dark-theme.css.map */
